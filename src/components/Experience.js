@@ -121,7 +121,7 @@ const ExpBody = styled.p`
   margin-top: 5px;
 `;
 const ExpImg = styled.img`
-  height: 6rem;
+  height: 125px;
   width: auto;
   align-self: end;
 

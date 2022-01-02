@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import resumeFile from "/static/cjlee-resume.pdf";
 import { SectionHeading } from "./SectionHeading";
-import Myself from "../images/self.png";
+import Myself from "../images/self.jpg";
 import LinkedIn from "../images/linkedin.svg";
 import Resume from "../images/resume.svg";
 import Email from "../images/email.svg";
@@ -36,11 +36,11 @@ const Age = () => {
   const [time, setTime] = useState(calculateAge());
 
   useEffect(() => {
-    const interval = setInterval(() => setTime(calculateAge(), 1000));
+    const interval = setInterval(() => setTime(calculateAge()), 25);
     return () => {
       clearInterval(interval);
     };
-  });
+  }, []);
 
   return time.toString().slice(0, 12);
 };
@@ -80,9 +80,9 @@ const About = () => {
             the state of the world every year.
           </AboutBio>
           {Icon(LinkedIn, "https://www.linkedin.com/in/cj-lee/")}
+          {Icon(GitHub, "https://github.com/choongjae")}
           {Icon(Resume, resumeFile)}
           {Icon(Email, "mailto:cl2362@cornell.edu")}
-          {Icon(GitHub, "https://github.com/choongjae")}
         </AboutColumn>
       </AboutFlex>
     </AboutContainer>
@@ -92,18 +92,21 @@ const About = () => {
 export default About;
 
 const AboutContainer = styled.div`
-  height: max(100vh, 800px);
-  margin-top: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
 `;
 
 const AboutFlex = styled.div`
-  height: 100%;
-  margin-top: -100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   align-items: center;
+  width: min(100%, 1400px);
+  margin: 0 auto 0 auto;
 
   @media screen and (max-width: 768px) {
     display: block;

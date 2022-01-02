@@ -1,3 +1,5 @@
+v. 0.2
+
 To Do:
 
 Functional:

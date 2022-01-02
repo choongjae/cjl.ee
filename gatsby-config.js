@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `CJ Lee`,
-    description: `CJ Lee Personal Website`,
+    titleTemplate: `%s • CJ Lee`,
+    defaultTitle: `CJ Lee`,
+    description: `CJ Lee: Computer Science @ Cornell`,
     author: `@cjlee`,
-    siteUrl: `https://cjl.ee/`,
+    siteUrl: `https://cjl.ee`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,7 +32,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/logo.svg`, // This path is relative to the root of the site.
+        icon: `static/logo.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

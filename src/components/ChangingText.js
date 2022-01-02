@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const descriptors = [
-  "Cornell Sophomore",
+  "Sophomore @ Cornell",
   "Computer Science Major",
   "Sleeping Minor",
   "Technologist-in-Training",
@@ -24,7 +24,6 @@ const ChangingText = () => {
   useEffect(() => {
     const update = setTimeout(() => {
       setDescript((descript + 1) % descriptors.length);
-      // console.log("changed")
     }, 3500);
     return () => clearInterval(update);
   }, [descript]);

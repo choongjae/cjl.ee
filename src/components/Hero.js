@@ -3,7 +3,7 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 
 import ChangingText from "./ChangingText";
-import Logo from "../images/logo.svg";
+import Logo from "/static/logo.svg";
 
 const HWord = styled(motion.div)`
   display: inline-block;
@@ -129,8 +129,11 @@ const HContainer = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
+  width: min(100%,1400px);
+  margin:auto;
 
   @media screen and (max-width: 768px) {
+    width: 100%
     flex-direction: column;
   }
 
