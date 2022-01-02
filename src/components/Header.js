@@ -1,9 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "gatsby";
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 import "../styles/index.css";
-// import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
 const navData = [
@@ -18,8 +17,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // console.log(window.scrollY + " and " + scroll)
-
       if (window.scrollY > scroll && showing.current) {
         showing.current = false;
       }
@@ -38,10 +35,10 @@ const Header = () => {
 
   return (
     <Nav show={showing.current}>
-      <Bars />
+      {/* <Bars /> */}
       <NavMenu>
         {navData.map((item, index) => (
-          <NavLink href={item.link} key={index}>
+          <NavLink to={item.link} key={index}>
             {item.title}
           </NavLink>
         ))}
@@ -87,12 +84,14 @@ const NavMenu = styled.div`
   height: 100%;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  ${
+    "" /* @media screen and (max-width: 768px) {
     display: none;
+  } */
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(AnchorLink)`
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -102,5 +101,13 @@ const NavLink = styled(Link)`
   text-align: center;
   font-size: 24px;
   color: black;
-  background: transparent;
+  background: rgba(255, 229, 194, 0.5);
+
+  &:first-child {
+    border-radius: 0 0 0 25px;
+  }
+
+  &:last-child {
+    border-radius: 0 0 25px 0;
+  }
 `;

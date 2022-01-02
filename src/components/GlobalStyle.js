@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components"
-import "../styles/index.css"
+import { createGlobalStyle } from "styled-components";
+import "../styles/index.css";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -8,8 +8,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     min-height: 0vw;  ${"" /* Makes responsiveness work on Safari */}
     background: #FFF0DB;
-    scroll-behavior: smooth;
-    ${"" /* scroll-behavior: smooth */}
 
     h1{
         font-size: 100px
@@ -30,4 +28,4 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none
     }
 }
-`
+`;

@@ -152,7 +152,7 @@ const HColumn = styled.div`
 `;
 
 const HImage = styled.img`
-  width: 75%;
+  max-width: 75%;
   height: auto;
 `;
 

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import MetaLogo from "../images/Meta.png";
+import MetaLogo from "../images/meta.png";
 import CISLogo from "../images/cornell.png";
 import ACSULogo from "../images/acsu.png";
-import CUSailLogo from "../images/CUSail.png";
+import CUSailLogo from "../images/cusail.png";
 import { SectionHeading } from "./SectionHeading";
 
 const ExpData = [
@@ -18,19 +18,29 @@ const ExpData = [
     logo: CISLogo,
     org: "Cornell CIS",
     title: "CS 1110 Course Consultant",
-    body: "Fall 2021, Ithaca",
+    body: "Fall 2021 - Now<br> \
+    Manage a lab section, grade assignments, hold consulting hours, and  \
+    render assistance to students in Cornell's main introductory CS class.<br>\
+    (Includes playing lots of Python Space Invaders.)",
   },
   {
     logo: ACSULogo,
     org: "ACSU",
     title: "Web Dev Officer",
-    body: "Spring 2021-, Ithaca",
+    body: "Spring 2021 - Now<br> \
+    Manage the website of the Association of Computer Science Undergraduates, \
+    Cornell’s largest undergraduate CS club, with information about socials, \
+    professional workshops, and general guidance for 1500 CS majors at Cornell<br>",
   },
   {
     logo: CUSailLogo,
     org: "CUSail",
     title: "Business and Operations Subteam",
-    body: "Fall 2020-, Ithaca",
+    body: "Fall 2020 - Now <br>\
+    Manage logistics and outreach of the 30 member student-led project team, \
+    from web development to recruitment, including raising $3000 dollars for team budget,\
+    all towards the goal of building a competition-ready autonomous sailboat!\
+    ",
   },
 ];
 
@@ -65,30 +75,34 @@ export default Experience;
 const ExpContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
 `;
 
-const ExpBoxes = styled.div``;
+const ExpBoxes = styled.div`
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 const ExpBox = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0 auto 2% auto;
-  padding: 20px;
-  width: 90%;
-  height: 100%;
-  border-radius: 25px;
+  margin: 20px 0 10% 0;
   align-items: center;
   justify-content: center;
 
   .expTxt {
-    flex: 70%;
+    flex: 50%;
+    margin: 0 5% 0 5%;
     @media screen and (max-width: 768px) {
       text-align: center;
     }
   }
   .expImg {
-    flex: 30%;
+    flex: 20%;
     text-align: center;
     @media screen and (max-width: 768px) {
       display: none;
@@ -104,6 +118,7 @@ const ExpTitle = styled.h4`
 `;
 const ExpBody = styled.p`
   font-size: 20px;
+  margin-top: 5px;
 `;
 const ExpImg = styled.img`
   height: 6rem;

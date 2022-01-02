@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import resumeFile from "../pages/resume.pdf";
+import resumeFile from "/static/cjlee-resume.pdf";
 import { SectionHeading } from "./SectionHeading";
 import Myself from "../images/self.png";
 import LinkedIn from "../images/linkedin.svg";
@@ -13,7 +13,7 @@ const links = [
   {
     text: "Cornell University",
     color: "#B31B1B",
-    link: "https://www.youtube.com/watch?t=3895&v=OL2fmTJU2P4&feature=youtu.be",
+    link: "https://www.youtube.com/watch?v=OL2fmTJU2P4&t=3896s",
   },
   {
     text: "New Jersey",
@@ -127,7 +127,7 @@ const AboutImage = styled.img`
 `;
 const AboutH1 = styled.h2``;
 const AboutBio = styled.p`
-  width: 75%;
+  width: min(75%, 750px);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -135,5 +135,5 @@ const AboutBio = styled.p`
 
 const AboutIcon = styled.img`
   margin: 50px 25px 0px 25px;
-  width: 10%;
+  width: min(10%, 75px);
 `;
