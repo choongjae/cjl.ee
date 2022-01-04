@@ -7,7 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     min-height: 0vw;  ${"" /* Makes responsiveness work on Safari */}
-    background: #FFF0DB;
+    
+    body{
+        background: #FFF0DB
+    }
 
     h1{
         font-size: 100px

@@ -97,6 +97,10 @@ const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 100px;
+
+  @media screen and (max-width: 850px) {
+    height: 100%;
+  }
 `;
 
 const AboutFlex = styled.div`

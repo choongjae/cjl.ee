@@ -76,7 +76,7 @@ const Hero = ({ className }) => {
   }
 
   return (
-    <HContainer className={className}>
+    <HContainer className={className + " bg"}>
       <HColumn className="hTxt">
         <AnimatePresence initial={false}>
           <HName
@@ -133,7 +133,7 @@ const HContainer = styled.div`
   margin:auto;
 
   @media screen and (max-width: 768px) {
-    width: 100%
+    width: 100%;
     flex-direction: column;
   }
 
