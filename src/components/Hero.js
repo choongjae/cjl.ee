@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
+import Typewriter from "typewriter-effect";
 
 import ChangingText from "./ChangingText";
 import Logo from "/static/logo.svg";
@@ -111,7 +112,38 @@ const Hero = ({ className }) => {
             ))}
           </HName>
         </AnimatePresence>
-        <HTitle>{titleText}</HTitle>
+        {/* <HTitle>{titleText}</HTitle> */}
+        <HTitle>
+          <HTitleTypewriter
+            options={{
+              strings: [
+                "Sophomore @ Cornell",
+                "Computer Science Major",
+                "Sleeping Minor",
+                "Technologist-in-Training",
+                "Korean-American",
+                "Computador",
+                "Oklahomon",
+                "Red Big Cornellian",
+                "Cookie Lover",
+                "Milk Aficionado",
+                "Based around NYC",
+                "Like and Bookmark!",
+                "or don't.... :(",
+                "Have a great day!",
+                "Romanticize your life :)",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+            skipAddStyles={true}
+            style={{
+              fontSize: "48px",
+              fontFamily: "Fira Coda, monospace",
+              marginTop: "10px",
+            }}
+          />
+        </HTitle>
       </HColumn>
       <HColumn className="hImg">
         <HImage src={Logo} />
@@ -159,11 +191,16 @@ const HImage = styled.img`
   height: auto;
 `;
 
-const HName = styled.h1`
-  background: transparent;
+const HName = styled.h1``;
+
+const HTitleTypewriter = styled(Typewriter)`
+  font-family: "Fira Code", monospace;
+  margin-top: 10px;
 `;
 
-const HTitle = styled.h2`
-  margin-top: 10px;
-  background: transparent;
+const HTitle = styled.h3`
+  * {
+    font-family: "Fira Code", monospace;
+    margin-top: 10px;
+  }
 `;

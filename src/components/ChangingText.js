@@ -5,7 +5,7 @@ const descriptors = [
   "Computer Science Major",
   "Sleeping Minor",
   "Technologist-in-Training",
-  "Korean-American 🇰🇷🇺🇸",
+  "Korean-American",
   "Computador",
   "Oklahomon",
   "Red Big Cornellian",
@@ -28,7 +28,7 @@ const ChangingText = () => {
     return () => clearInterval(update);
   }, [descript]);
 
-  return <span>{descriptors[descript]}</span>;
+  return descriptors[descript];
 };
 
 export default ChangingText;
