@@ -5,9 +5,13 @@ import resumeFile from "/static/cjlee-resume.pdf";
 import { SectionHeading } from "./SectionHeading";
 import Myself from "../images/self.jpg";
 import LinkedIn from "../images/linkedin.svg";
+import LinkedInI from "../images/linkedini.svg";
 import Resume from "../images/resume.svg";
+import ResumeI from "../images/resumei.svg";
 import Email from "../images/email.svg";
+import EmailI from "../images/emaili.svg";
 import GitHub from "../images/github.svg";
+import GitHubI from "../images/githubi.svg";
 
 const links = [
   {
@@ -48,7 +52,11 @@ const Age = () => {
 const Icon = (src, link) => {
   return (
     <a href={link} rel="noopener noreferrer">
-      <AboutIcon src={src} />
+      <AboutIcon
+        src={src[0]}
+        onMouseOver={(e) => (e.currentTarget.src = src[1])}
+        onMouseOut={(e) => (e.currentTarget.src = src[0])}
+      />
     </a>
   );
 };
@@ -79,10 +87,10 @@ const About = () => {
             incredibly amazed and passionate at how much technology is changing
             the state of the world every year.
           </AboutBio>
-          {Icon(LinkedIn, "https://www.linkedin.com/in/cj-lee/")}
-          {Icon(GitHub, "https://github.com/choongjae")}
-          {Icon(Resume, resumeFile)}
-          {Icon(Email, "mailto:cl2362@cornell.edu")}
+          {Icon([LinkedIn, LinkedInI], "https://www.linkedin.com/in/cj-lee/")}
+          {Icon([GitHub, GitHubI], "https://github.com/choongjae")}
+          {Icon([Resume, ResumeI], resumeFile)}
+          {Icon([Email, EmailI], "mailto:cl2362@cornell.edu")}
         </AboutColumn>
       </AboutFlex>
     </AboutContainer>

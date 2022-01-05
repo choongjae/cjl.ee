@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import GitHubLogo from "../images/github.svg";
+import GitHubLogoI from "../images/githubi.svg";
 import LinkIcon from "../images/link.svg";
+import LinkIconI from "../images/linki.svg";
 
 import { SectionHeading } from "./SectionHeading";
 
@@ -21,7 +23,10 @@ const ProjectData = [
     title: "OCamlMon",
     github: "https://github.com/choongjae/OCamlMon",
     description:
-      "A remake of Pokemon, written completely in OCaml! Still a work in progress...",
+      "A remake of Pokemon created completely in OCaml using functional \
+      programming paradigms. Worked on the battle engine and JSON data storage \
+      and retrieval, along with writing an external Python script to convert \
+      images into a JSON format.",
     tools: "OCaml",
   },
   {
@@ -51,7 +56,11 @@ const ProjectData = [
 const Icon = (src, link) => {
   return (
     <a href={link} rel="noopener noreferrer">
-      <ProjectIcon src={src} />
+      <ProjectIcon
+        src={src[0]}
+        onMouseOver={(e) => (e.currentTarget.src = src[1])}
+        onMouseOut={(e) => (e.currentTarget.src = src[0])}
+      />
     </a>
   );
 };
@@ -61,10 +70,14 @@ function Links(obj) {
   return (
     <ProjectLinks>
       {obj.github && (
-        <ProjectLinkIcon>{Icon(GitHubLogo, obj.github)}</ProjectLinkIcon>
+        <ProjectLinkIcon>
+          {Icon([GitHubLogo, GitHubLogoI], obj.github)}
+        </ProjectLinkIcon>
       )}
       {obj.link && (
-        <ProjectLinkIcon>{Icon(LinkIcon, obj.link)}</ProjectLinkIcon>
+        <ProjectLinkIcon>
+          {Icon([LinkIcon, LinkIconI], obj.link)}
+        </ProjectLinkIcon>
       )}
     </ProjectLinks>
   );

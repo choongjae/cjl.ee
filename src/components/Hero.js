@@ -19,6 +19,28 @@ const HCharacter = styled(motion.span)`
   background: transparent;
 `;
 
+const titleOptions = {
+  strings: [
+    "Sophomore @ Cornell",
+    "Computer Science Major",
+    "Sleeping Minor",
+    "Technologist-in-Training",
+    "Korean-American",
+    "Computador",
+    "Oklahomon",
+    "Red Big Cornellian",
+    "Cookie Lover",
+    "Milk Aficionado",
+    "Based around NYC",
+    "Like and Bookmark!",
+    "or don't.... :(",
+    "Have a great day!",
+    "Romanticize your life :)",
+  ],
+  autoStart: true,
+  loop: true,
+};
+
 const Hero = ({ className }) => {
   //   const animating = useRef(false)
   //   const [descript, setDescript] = useState(0)
@@ -30,7 +52,7 @@ const Hero = ({ className }) => {
   //     }, 3500)
   //     return () => clearInterval(update)
   //   }, [descript])
-  let titleText = ChangingText();
+  // let titleText = ChangingText();
 
   const wordAnimation = {
     hidden: {},
@@ -112,37 +134,8 @@ const Hero = ({ className }) => {
             ))}
           </HName>
         </AnimatePresence>
-        {/* <HTitle>{titleText}</HTitle> */}
         <HTitle>
-          <HTitleTypewriter
-            options={{
-              strings: [
-                "Sophomore @ Cornell",
-                "Computer Science Major",
-                "Sleeping Minor",
-                "Technologist-in-Training",
-                "Korean-American",
-                "Computador",
-                "Oklahomon",
-                "Red Big Cornellian",
-                "Cookie Lover",
-                "Milk Aficionado",
-                "Based around NYC",
-                "Like and Bookmark!",
-                "or don't.... :(",
-                "Have a great day!",
-                "Romanticize your life :)",
-              ],
-              autoStart: true,
-              loop: true,
-            }}
-            skipAddStyles={true}
-            style={{
-              fontSize: "48px",
-              fontFamily: "Fira Coda, monospace",
-              marginTop: "10px",
-            }}
-          />
+          <Typewriter options={titleOptions} />
         </HTitle>
       </HColumn>
       <HColumn className="hImg">
@@ -192,11 +185,6 @@ const HImage = styled.img`
 `;
 
 const HName = styled.h1``;
-
-const HTitleTypewriter = styled(Typewriter)`
-  font-family: "Fira Code", monospace;
-  margin-top: 10px;
-`;
 
 const HTitle = styled.h3`
   * {
