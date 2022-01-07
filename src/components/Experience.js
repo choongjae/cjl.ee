@@ -8,12 +8,12 @@ import CUSailLogo from "../images/cusail.png";
 import { SectionHeading } from "./SectionHeading";
 
 const ExpData = [
-  {
-    logo: MetaLogo,
-    org: "Meta",
-    title: "Incoming Enterprise Engineer Intern",
-    body: "Summer 2022, Menlo Park",
-  },
+  // {
+  //   logo: MetaLogo,
+  //   org: "Meta",
+  //   title: "Incoming Enterprise Engineer Intern",
+  //   body: "Summer 2022, Menlo Park",
+  // },
   {
     logo: CISLogo,
     org: "Cornell CIS",
