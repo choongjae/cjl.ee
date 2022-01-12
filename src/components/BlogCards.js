@@ -10,7 +10,7 @@ const BlogCards = () => {
         nodes {
           frontmatter {
             title
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMMM Do, YYYY")
             tags
             emoji
             image
@@ -30,8 +30,8 @@ const BlogCards = () => {
       <BlogCardContainer>
         {/* <BlogArticles> */}
         {data.allMdx.nodes.map((node) => (
-          <BlogLink to={"/blog/" + node.slug}>
-            <BlogArticle key={node.id}>
+          <BlogLink key={node.id} to={"/blog/" + node.slug}>
+            <BlogArticle>
               <BlogHead>
                 <BlogEmoji>{node.frontmatter.emoji}</BlogEmoji>
                 <BlogCard>
@@ -74,12 +74,12 @@ const BlogCardContainer = styled.div`
   width: min(800px, 90%);
 `;
 
-const BlogArticles = styled.div`
-  background: #ffe2bd;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-`;
+// const BlogArticles = styled.div`
+//   background: #ffe2bd;
+//   border-radius: 20px;
+//   display: flex;
+//   flex-direction: column;
+// `;
 
 const BlogLink = styled(Link)`
   color: inherit;
@@ -102,7 +102,7 @@ const BlogArticle = styled.div`
 `;
 
 const BlogEmoji = styled.div`
-  margin: 25px;
+  margin: auto 25px auto 25px;
   font-size: 30px;
 `;
 
@@ -122,9 +122,14 @@ const BlogArticleHeader = styled.h4`
 const BlogHead = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 60%;
   margin-right: 25px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
+
 const BlogFoot = styled.div`
   margin: auto;
   max-width: 300px;

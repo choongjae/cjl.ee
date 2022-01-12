@@ -66,7 +66,6 @@ const Icon = (src, link) => {
 };
 
 function Links(obj) {
-  console.log(obj.link);
   return (
     <ProjectLinks>
       {obj.github && (

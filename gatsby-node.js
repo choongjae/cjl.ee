@@ -21,7 +21,6 @@ exports.createPages = async ({ graphql, actions }) => {
   `).then((result) => {
     const posts = result.data.allMdx.nodes;
     posts.forEach((node, index) => {
-      console.log(node);
       createPage({
         path: `${"blog/" + node.slug}`,
         component: blogPostTemplate,
