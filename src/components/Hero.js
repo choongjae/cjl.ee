@@ -184,7 +184,9 @@ const HImage = styled.img`
   height: auto;
 `;
 
-const HName = styled.h1``;
+const HName = styled.h1`
+  font-size: 100px;
+`;
 
 const HTitle = styled.h3`
   * {

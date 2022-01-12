@@ -1,19 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import MetaLogo from "../images/meta.png";
 import CISLogo from "../images/cornell.png";
 import ACSULogo from "../images/acsu.png";
 import CUSailLogo from "../images/cusail.png";
 import { SectionHeading } from "./SectionHeading";
 
 const ExpData = [
-  // {
-  //   logo: MetaLogo,
-  //   org: "Meta",
-  //   title: "Incoming Enterprise Engineer Intern",
-  //   body: "Summer 2022, Menlo Park",
-  // },
   {
     logo: CISLogo,
     org: "Cornell CIS",
@@ -75,6 +68,7 @@ export default Experience;
 const ExpContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 5%;
 `;
 
 const ExpBoxes = styled.div`

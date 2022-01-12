@@ -76,7 +76,7 @@ const About = () => {
           <AboutImage src={Myself} />
         </AboutColumn>
         <AboutColumn>
-          <AboutH1>Hi! I'm CJ.</AboutH1>
+          <AboutH2>Hi! I'm CJ.</AboutH2>
           <AboutBio>
             I’m a {Age()}-year-old sophomore at {Link(links[0])} studying
             Computer Science. I’m from north {Link(links[1])}, although I’ve
@@ -140,7 +140,7 @@ const AboutImage = styled.img`
     display: none;
   }
 `;
-const AboutH1 = styled.h2``;
+const AboutH2 = styled.h2``;
 const AboutBio = styled.p`
   width: min(75%, 750px);
   text-align: center;

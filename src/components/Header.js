@@ -6,9 +6,10 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
 const navData = [
-  { title: "About", link: "/#about" },
-  { title: "Experience", link: "/#experience" },
-  { title: "Projects", link: "/#projects" },
+  { title: "about", link: "/#about" },
+  { title: "experience", link: "/#experience" },
+  { title: "projects", link: "/#projects" },
+  { title: "blog", link: "/#blog" },
 ];
 
 const Header = () => {

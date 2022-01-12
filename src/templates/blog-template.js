@@ -46,7 +46,7 @@ export default BlogPost;
 const BlogHeader = styled.div``;
 
 const BlogTitle = styled.h1`
-  font-size: 64px;
+  ${"" /* font-size: 64px; */}
   text-align: center;
 `;
 
@@ -80,8 +80,10 @@ const BlogDot = styled.span`
 `;
 const BlogBody = styled.div`
   padding: 0 25px 25px 25px;
-  #parent * {
+  ${
+    "" /* #parent * {
     margin-bottom: 15px;
+  } */
   }
 `;
 const BlogContent = styled(MDXRenderer)`

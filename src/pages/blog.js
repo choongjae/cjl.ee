@@ -22,7 +22,6 @@ const blog = ({ data }) => {
               <BlogCard>
                 <BlogArticleHeader>{node.frontmatter.title}</BlogArticleHeader>
                 <p>{node.frontmatter.date}</p>
-                {/* <MDXRenderer>{node.body}</MDXRenderer> */}
               </BlogCard>
             </BlogArticle>
           </BlogLink>
@@ -61,7 +60,8 @@ const BlogHeader = styled.h1`
 const BlogForm = styled.form``;
 
 const BlogSearch = styled.input`
-  display: block;
+  ${"" /* display: block; */}
+  display: none; /* Still in development */
   margin: 25px auto 25px auto;
   width: 400px;
 `;
@@ -82,7 +82,7 @@ const BlogArticle = styled.article`
   flex-direction: row;
   align-items: center;
   height: 100px;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   :hover {
     background: #fcd8a9;
   }

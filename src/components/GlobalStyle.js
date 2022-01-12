@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1{
-        font-size: 100px
+        font-size: 80px
     }
     h2{
         font-size: 64px
