@@ -21,7 +21,7 @@ const ExpData = [
     org: "ACSU",
     title: "Web Dev Officer",
     body: "Spring 2021 - Now<br> \
-    Manage the website of the Association of Computer Science Undergraduates, \
+    Develop the website of the Association of Computer Science Undergraduates, \
     Cornell’s largest undergraduate CS club, with information about socials, \
     professional workshops, and general guidance for 1500 CS majors at Cornell<br>",
   },

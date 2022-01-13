@@ -1,28 +1,42 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXProvider } from "@mdx-js/react";
 import styled from "styled-components";
 import BlogLayout from "../components/BlogLayout";
+import Seo from "../components/Seo";
+
+const BlogP = styled.p`
+  margin: 15px 0 15px 0;
+`;
+const BlogUl = styled.ul`
+  margin-left: 25px;
+`;
+
+const components = { p: BlogP, ul: BlogUl };
 
 const BlogPost = ({ data }) => {
   return (
-    <BlogLayout>
-      <BlogHeader>
-        <BlogTitle>{data.mdx.frontmatter.title}</BlogTitle>
-        <BlogDetails>
-          <BlogDate>{data.mdx.frontmatter.date}</BlogDate>
-          <BlogDot>·</BlogDot>
-          <BlogTags>
-            {data.mdx.frontmatter.tags.map((tag) => (
-              <BlogTag key={tag}>{tag}</BlogTag>
-            ))}
-          </BlogTags>
-        </BlogDetails>
-      </BlogHeader>
-      <BlogBody>
-        <BlogContent>{data.mdx.body}</BlogContent>
-      </BlogBody>
-    </BlogLayout>
+    <MDXProvider components={components}>
+      <BlogLayout>
+        <Seo title={data.mdx.frontmatter.title}></Seo>
+        <BlogHeader>
+          <BlogTitle>{data.mdx.frontmatter.title}</BlogTitle>
+          <BlogDetails>
+            <BlogDate>{data.mdx.frontmatter.date}</BlogDate>
+            <BlogDot>·</BlogDot>
+            <BlogTags>
+              {data.mdx.frontmatter.tags.map((tag) => (
+                <BlogTag key={tag}>{tag}</BlogTag>
+              ))}
+            </BlogTags>
+          </BlogDetails>
+        </BlogHeader>
+        <BlogBody>
+          <BlogContent>{data.mdx.body}</BlogContent>
+        </BlogBody>
+      </BlogLayout>
+    </MDXProvider>
   );
 };
 
@@ -48,13 +62,21 @@ const BlogHeader = styled.div``;
 const BlogTitle = styled.h1`
   ${"" /* font-size: 64px; */}
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
 `;
 
 const BlogDetails = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin: 15px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const BlogDate = styled.p`
   padding: 0 5px 0 5px;
@@ -63,9 +85,14 @@ const BlogDate = styled.p`
   font-size: 18px;
   background: #fcd8a9;
   border-radius: 5px;
+  width: auto;
 `;
 const BlogTags = styled.p`
   margin-left: 10px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 `;
 const BlogTag = styled.span`
   padding: 0 5px 0 5px;
@@ -77,6 +104,10 @@ const BlogTag = styled.span`
 `;
 const BlogDot = styled.span`
   ${"" /* margin: 0 10px 0 10px; */}
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const BlogBody = styled.div`
   padding: 0 25px 25px 25px;
@@ -93,5 +124,9 @@ const BlogContent = styled(MDXRenderer)`
 
   p {
     margin-bottom: 15px;
+  }
+
+  li {
+    margin-left: 15px;
   }
 `;

@@ -149,6 +149,6 @@ const AboutBio = styled.p`
 `;
 
 const AboutIcon = styled.img`
-  margin: 50px 25px 0px 25px;
+  margin: 50px 20px 0px 20px;
   width: min(10%, 75px);
 `;

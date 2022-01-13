@@ -3,7 +3,6 @@ import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import Typewriter from "typewriter-effect";
 
-import ChangingText from "./ChangingText";
 import Logo from "/static/logo.svg";
 
 const HWord = styled(motion.div)`

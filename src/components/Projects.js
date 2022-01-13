@@ -17,7 +17,7 @@ const ProjectData = [
       with sweat, tears, and a sizable amount of Googling to remember how flexboxes\
       work. 🥸",
     tools:
-      "React, Gatsby, styled-components, Framer Motion, GitHub Pages, Figma",
+      "React, Gatsby, GraphQL, styled-components, Framer Motion, GitHub Pages, Figma",
   },
   {
     title: "OCamlMon",

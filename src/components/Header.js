@@ -111,4 +111,7 @@ const NavLink = styled(AnchorLink)`
   &:last-child {
     border-radius: 0 0 25px 0;
   }
+  @media screen and (max-width: 400px) {
+    font-size: 16px;
+  }
 `;

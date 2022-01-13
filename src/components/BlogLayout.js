@@ -40,7 +40,7 @@ const BlogLink = styled(Link)`
 `;
 
 const BlogContainer = styled.div`
-  width: 680px;
+  width: min(680px, 80%);
   margin: 75px auto 75px auto;
   background: #ffe2bd;
   border-radius: 20px;

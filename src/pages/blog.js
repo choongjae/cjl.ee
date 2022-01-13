@@ -1,8 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import Layout from "../components/Layout";
-import { GlobalStyle } from "../components/GlobalStyle";
+import Seo from "../components/Seo";
 import styled from "styled-components";
 import BlogLayout from "../components/BlogLayout";
 
@@ -10,6 +8,7 @@ const blog = ({ data }) => {
   return (
     // <Layout pageTitle="Blog Posts">
     <BlogLayout>
+      <Seo title="Blog"></Seo>
       <BlogHeader>blog</BlogHeader>
       <BlogForm>
         <BlogSearch></BlogSearch>
@@ -81,8 +80,10 @@ const BlogArticle = styled.article`
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  ${"" /* height: 100px; */}
+  height:auto;
   border-radius: 20px;
+  padding: 10px 0 10px 0;
   :hover {
     background: #fcd8a9;
   }
