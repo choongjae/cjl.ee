@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Seo from "../components/Seo";
 import styled from "styled-components";
-import BlogLayout from "./layouts/BlogLayout";
+import BlogLayout from "../components/layouts/BlogLayout";
 
 const blog = ({ data }) => {
   return (

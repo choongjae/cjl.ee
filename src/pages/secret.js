@@ -1,5 +1,5 @@
 import React from "react";
-import HomeLayout from "./layouts/HomeLayout";
+import HomeLayout from "../components/layouts/HomeLayout";
 
 import Ledge from "../images/ledge.jpg";
 

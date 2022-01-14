@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import HomeLayout from "./layouts/HomeLayout";
+import HomeLayout from "../components/layouts/HomeLayout";
 import Seo from "../components/Seo";
 import Hero from "../components/home/Hero";
 import Bio from "../components/home/About";
