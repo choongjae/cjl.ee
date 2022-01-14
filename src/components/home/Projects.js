@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import GitHubLogo from "../images/github.svg";
-import GitHubLogoI from "../images/githubi.svg";
-import LinkIcon from "../images/link.svg";
-import LinkIconI from "../images/linki.svg";
 
-import { SectionHeading } from "./SectionHeading";
+import HoverIcon from "../IconLink";
+import { SectionHeading } from "../SectionHeading";
+
+import GitHubLogo from "../../images/github.svg";
+import GitHubLogoI from "../../images/githubi.svg";
+import LinkIcon from "../../images/link.svg";
+import LinkIconI from "../../images/linki.svg";
 
 const ProjectData = [
   {
@@ -53,29 +55,17 @@ const ProjectData = [
   },
 ];
 
-const Icon = (src, link) => {
-  return (
-    <a href={link} rel="noopener noreferrer">
-      <ProjectIcon
-        src={src[0]}
-        onMouseOver={(e) => (e.currentTarget.src = src[1])}
-        onMouseOut={(e) => (e.currentTarget.src = src[0])}
-      />
-    </a>
-  );
-};
-
 function Links(obj) {
   return (
     <ProjectLinks>
       {obj.github && (
         <ProjectLinkIcon>
-          {Icon([GitHubLogo, GitHubLogoI], obj.github)}
+          <ProjectIcon src={[GitHubLogo, GitHubLogoI]} link={obj.github} />
         </ProjectLinkIcon>
       )}
       {obj.link && (
         <ProjectLinkIcon>
-          {Icon([LinkIcon, LinkIconI], obj.link)}
+          <ProjectIcon src={[LinkIcon, LinkIconI]} link={obj.link} />
         </ProjectLinkIcon>
       )}
     </ProjectLinks>
@@ -145,6 +135,10 @@ const ProjectTools = styled.p`
   font-family: "Fira Code", monospace;
 `;
 
-const ProjectIcon = styled.img`
+// const ProjectIcon = styled.img`
+//   width: 25px;
+// `;
+
+const ProjectIcon = styled(HoverIcon)`
   width: 25px;
 `;

@@ -1,22 +1,22 @@
 import * as React from "react";
 
-import Layout from "../components/Layout";
+import HomeLayout from "./layouts/HomeLayout";
 import Seo from "../components/Seo";
-import Hero from "../components/Hero";
-import Bio from "../components/About";
-import Blog from "../components/BlogCards";
-import Experience from "../components/Experience";
-import Projects from "../components/Projects";
+import Hero from "../components/home/Hero";
+import Bio from "../components/home/About";
+import Experience from "../components/home/Experience";
+import Projects from "../components/home/Projects";
+import Blog from "../components/home/BlogCards";
 
 const IndexPage = () => (
-  <Layout>
+  <HomeLayout>
     <Seo title="Home" />
     <Hero />
     <Bio />
     <Experience />
     <Projects />
     <Blog />
-  </Layout>
+  </HomeLayout>
 );
 
 export default IndexPage;

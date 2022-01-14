@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import "../styles/index.css";
+import "../../styles/index.css";
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 * {
     font-family: 'EB Garamond';
     margin: 0;
@@ -36,3 +36,5 @@ export const GlobalStyle = createGlobalStyle`
     }
 }
 `;
+
+export default GlobalStyle;

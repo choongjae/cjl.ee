@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+// Deprecated, replaced with Typewriter js effect
+
+import { useState, useEffect } from "react";
 
 const descriptors = [
   "Sophomore @ Cornell",

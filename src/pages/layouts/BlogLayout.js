@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { GlobalStyle } from "../components/GlobalStyle";
+import GlobalStyle from "./GlobalStyle";
 import styled from "styled-components";
 
 const BlogLayout = ({ children }) => {

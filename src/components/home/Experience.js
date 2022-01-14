@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import CISLogo from "../images/cornell.png";
-import ACSULogo from "../images/acsu.png";
-import CUSailLogo from "../images/cusail.png";
-import { SectionHeading } from "./SectionHeading";
+import { SectionHeading } from "../SectionHeading";
+
+import CISLogo from "../../images/cornell.png";
+import ACSULogo from "../../images/acsu.png";
+import CUSailLogo from "../../images/cusail.png";
 
 const ExpData = [
   {

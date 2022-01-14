@@ -1,4 +1,4 @@
-v. 0.3
+v. 0.4
 
 To Do:
 
@@ -6,11 +6,10 @@ Functional:
 
 - Add animation for logo
 - Add details for Projects (pictures, text backgrounds)
-- Factor out a LOT of components
 - Add Dark Mode
 
 Appearance:
 
-- Make navbar responsive for mobile
 - Add general animations when scrolling through page
+- Restyle Experience/Projects (to not be super-duper centered)
 - Redesign blog style

@@ -1,8 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
-import { FaBars } from "react-icons/fa";
-import "../styles/index.css";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+// import { FaBars } from "react-icons/fa";
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
 const navData = [
@@ -63,19 +62,21 @@ const Nav = styled.nav`
   margin-top: ${(props) => (props.show ? "0px" : "-75px")};
   transition: margin-top 0.5s;
 `;
-const Bars = styled(FaBars)`
-  display: none;
 
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 100%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
+// const Bars = styled(FaBars)`
+//   display: none;
+
+//   @media screen and (max-width: 768px) {
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     transform: translate(-100%, 100%);
+//     font-size: 1.8rem;
+//     cursor: pointer;
+//   }
+// `;
+
 const NavMenu = styled.div`
   display: flex;
   flex-direction: row;
@@ -84,12 +85,6 @@ const NavMenu = styled.div`
   background: transparent;
   height: 100%;
   width: 100%;
-
-  ${
-    "" /* @media screen and (max-width: 768px) {
-    display: none;
-  } */
-  }
 `;
 
 const NavLink = styled(AnchorLink)`

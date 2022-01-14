@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/Layout";
+import HomeLayout from "./layouts/HomeLayout";
 
 import Ledge from "../images/ledge.jpg";
 
 const SecretPage = () => {
   return (
-    <Layout>
+    <HomeLayout>
       <div style={{ marginTop: "75px" }}>
         <h3 style={{ textAlign: "center" }}>Welcome to cjl.ee! Or is it?</h3>
         <img
@@ -20,7 +20,7 @@ const SecretPage = () => {
         ></img>
         <p style={{ textAlign: "center" }}>yeah this is basically it</p>
       </div>
-    </Layout>
+    </HomeLayout>
   );
 };
 

@@ -2,11 +2,10 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Seo from "../components/Seo";
 import styled from "styled-components";
-import BlogLayout from "../components/BlogLayout";
+import BlogLayout from "./layouts/BlogLayout";
 
 const blog = ({ data }) => {
   return (
-    // <Layout pageTitle="Blog Posts">
     <BlogLayout>
       <Seo title="Blog"></Seo>
       <BlogHeader>blog</BlogHeader>

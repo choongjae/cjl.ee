@@ -3,8 +3,9 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import styled from "styled-components";
-import BlogLayout from "../components/BlogLayout";
+import BlogLayout from "../pages/layouts/BlogLayout";
 import Seo from "../components/Seo";
+import ImgCaption from "../components/blog/ImgCaption";
 
 const BlogP = styled.p`
   margin: 15px 0 15px 0;
@@ -13,7 +14,7 @@ const BlogUl = styled.ul`
   margin-left: 25px;
 `;
 
-const components = { p: BlogP, ul: BlogUl };
+const components = { p: BlogP, ul: BlogUl, ImgCaption };
 
 const BlogPost = ({ data }) => {
   return (
