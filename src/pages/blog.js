@@ -3,10 +3,12 @@ import { graphql, Link } from "gatsby";
 import Seo from "../components/Seo";
 import styled from "styled-components";
 import BlogLayout from "../components/layouts/BlogLayout";
+import HomeLayout from "../components/layouts/HomeLayout";
 
 const blog = ({ data }) => {
   return (
     <BlogLayout>
+      {/* // <BlogLayout> */}
       <Seo title="Blog"></Seo>
       <BlogHeader>blog</BlogHeader>
       <BlogForm>
@@ -26,6 +28,7 @@ const blog = ({ data }) => {
         ))}
       </BlogArticles>
     </BlogLayout>
+    // </BlogLayout>
     // </Layout>
   );
 };
@@ -67,7 +70,7 @@ const BlogSearch = styled.input`
 const BlogArticles = styled.div`
   ${"" /* width: 680px; */}
 
-  background: #ffe2bd;
+  background: var(--color-blog);
   border-radius: 20px;
 `;
 
@@ -84,7 +87,7 @@ const BlogArticle = styled.article`
   border-radius: 20px;
   padding: 10px 0 10px 0;
   :hover {
-    background: #fcd8a9;
+    background: var(--color-hover);
   }
 `;
 

@@ -6,7 +6,6 @@ import styled from "styled-components";
 const BlogLayout = ({ children }) => {
   return (
     <>
-      <GlobalStyle></GlobalStyle>
       <BlogHome>
         <BlogLink to={"/"}>🏠</BlogLink>
         <BlogLink to={"/blog"}>📖</BlogLink>
@@ -35,14 +34,14 @@ const BlogLink = styled(Link)`
   padding: 0 10px 0 10px;
 
   :hover {
-    background: #fcd8a9;
+    background: var(--color-hover);
   }
 `;
 
 const BlogContainer = styled.div`
   width: min(680px, 80%);
   margin: 75px auto 75px auto;
-  background: #ffe2bd;
+  background: var(--color-blog);
   border-radius: 20px;
   margin-top: 75px;
 `;

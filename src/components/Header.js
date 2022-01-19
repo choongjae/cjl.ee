@@ -4,6 +4,8 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 // import { FaBars } from "react-icons/fa";
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
+import DarkToggle from "./DarkToggle";
+
 const navData = [
   { title: "about", link: "/#about" },
   { title: "experience", link: "/#experience" },
@@ -43,6 +45,7 @@ const Header = () => {
           </NavLink>
         ))}
       </NavMenu>
+      <DarkToggle />
     </Nav>
   );
 };
@@ -96,8 +99,10 @@ const NavLink = styled(AnchorLink)`
   cursor: pointer;
   text-align: center;
   font-size: 24px;
-  color: black;
-  background: rgba(255, 229, 194, 0.5);
+  color: var(--color-text);
+  ${"" /* background: rgba(255, 229, 194, 0.5); */}
+  background: var(--color-background);
+  ${"" /* box-shadow: 1px 2px 2px black; */}
 
   &:first-child {
     border-radius: 0 0 0 25px;

@@ -24,6 +24,14 @@ const BlogCards = () => {
     }
   `);
 
+  function handleHover(e) {
+    const t = getComputedStyle(document.documentElement).getPropertyValue(
+      "--color-hover"
+    );
+    alert(t);
+    e.currentTarget.style.background = t;
+  }
+
   return (
     <BlogContainer id="blog">
       <SectionHeading left={true}>blog</SectionHeading>
@@ -31,7 +39,12 @@ const BlogCards = () => {
         {/* <BlogArticles> */}
         {data.allMdx.nodes.map((node) => (
           <BlogLink key={node.id} to={"/blog/" + node.slug}>
-            <BlogArticle>
+            <BlogArticle
+            // onMouseOver={(e) => handleHover(e)}
+            // onMouseLeave={(e) => {
+            //   e.currentTarget.style.background = "transparent";
+            // }}
+            >
               <BlogHead>
                 <BlogEmoji>{node.frontmatter.emoji}</BlogEmoji>
                 <BlogCard>
@@ -96,9 +109,10 @@ const BlogArticle = styled.div`
   padding: 15px;
   border-radius: 20px;
 
+  
   :hover {
-    background: #fcd8a9;
-  }
+    background: var(--color-hover);
+  
 `;
 
 const BlogEmoji = styled.div`
@@ -159,6 +173,6 @@ const BlogButton = styled(Link)`
   border-radius: 20px;
 
   :hover {
-    background: #fcd8a9;
+    background: var(--color-hover);
   }
 `;
