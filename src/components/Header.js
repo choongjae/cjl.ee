@@ -45,7 +45,7 @@ const Header = () => {
           </NavLink>
         ))}
       </NavMenu>
-      <DarkToggle />
+      <NavToggle />
     </Nav>
   );
 };
@@ -57,12 +57,12 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   z-index: 999;
-  background: transparent;
+  background: var(--color-background);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  margin-top: ${(props) => (props.show ? "0px" : "-75px")};
+  margin-top: ${(props) => (props.show ? "0px" : "-100px")};
   transition: margin-top 0.5s;
 `;
 
@@ -80,7 +80,10 @@ const Nav = styled.nav`
 //   }
 // `;
 
+// position absolute for dark mode toggle positioning
 const NavMenu = styled.div`
+  position: absolute;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,7 +104,7 @@ const NavLink = styled(AnchorLink)`
   font-size: 24px;
   color: var(--color-text);
   ${"" /* background: rgba(255, 229, 194, 0.5); */}
-  background: var(--color-background);
+  ${"" /* background: var(--color-background); */}
   ${"" /* box-shadow: 1px 2px 2px black; */}
 
   &:first-child {
@@ -111,7 +114,32 @@ const NavLink = styled(AnchorLink)`
   &:last-child {
     border-radius: 0 0 25px 0;
   }
-  @media screen and (max-width: 400px) {
-    font-size: 16px;
+  @media screen and (max-width: 475px) {
+    font-size: 18px;
+  }
+`;
+
+// position relative for positioning wrt navmenu
+// overflow visible important to avoid cutting off edges
+const NavToggle = styled(DarkToggle)`
+  position: relative;
+  top: 30px;
+  left: 90%;
+
+  overflow: visible !important;
+
+  background: var(--color-background);
+  border-radius: 5px;
+
+  @media screen and (max-width: 475px) {
+    top: 70px;
+    left: 47%;
+  }
+  ${"" /*So that the edges don't get cut off */}
+
+  ${
+    "" /* button {
+    overflow: visible !important;
+  } */
   }
 `;

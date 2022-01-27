@@ -171,6 +171,7 @@ const BlogButton = styled(Link)`
   font-size: 40px;
   color: inherit;
   border-radius: 20px;
+  color: var(--color-text);
 
   :hover {
     background: var(--color-hover);

@@ -40,6 +40,7 @@ const GlobalStyle = createGlobalStyle`
     li{
         font-size: 20px
     }
+    
 }
 `;
 

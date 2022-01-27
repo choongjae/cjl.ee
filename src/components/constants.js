@@ -1,4 +1,8 @@
 export const COLORS = {
+  global: {
+    light: "hsl(0deg, 0%, 10%)", // white
+    dark: "hsl(0deg, 0%, 100%)", // near-black
+  },
   text: {
     light: "hsl(0deg, 0%, 10%)", // white
     dark: "hsl(0deg, 0%, 100%)", // near-black
@@ -9,11 +13,15 @@ export const COLORS = {
   },
   blog: {
     light: "#ffe2bd",
-    dark: "#001d42",
+    dark: "#282b4f",
+  },
+  blog2: {
+    light: "#fcd8a9",
+    dark: "#3a3f70",
   },
   hover: {
     light: "#fcd8a9",
-    dark: "#032756",
+    dark: "#30335e",
   },
 };
 

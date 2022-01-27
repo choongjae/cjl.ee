@@ -84,7 +84,7 @@ const BlogDate = styled.p`
   margin-right: 10px;
   font-family: "Fira Code", monospace;
   font-size: 18px;
-  background: #fcd8a9;
+  background: var(--color-blog2);
   border-radius: 5px;
   width: auto;
 `;
@@ -100,7 +100,7 @@ const BlogTag = styled.span`
   margin: 0 10px 0 0;
   font-family: "Fira Code", monospace;
   ${"" /* font-size: 18px; */}
-  background: #fcd8a9;
+  background: var(--color-blog2);
   border-radius: 5px;
 `;
 const BlogDot = styled.span`
