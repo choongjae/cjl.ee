@@ -1,15 +1,17 @@
 import * as React from "react";
 
-import Header from "../../components/Header";
-import GlobalStyle from "./GlobalStyle";
+import Header from "../Header";
+// import { ThemeProvider } from "./ThemeContext";
+// import GlobalStyle from "./GlobalStyle";
 
 const HomeLayout = ({ children }) => {
   return (
+    // <ThemeProvider>
     <>
       <Header></Header>
-      <GlobalStyle />
       <main>{children}</main>
     </>
+    // </ThemeProvider>
   );
 };
 

@@ -2,12 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 import HoverIcon from "../IconLink";
-import { SectionHeading } from "../SectionHeading";
+import SectionHeading from "../SectionHeading";
+import { ThemeContext } from "../layouts/ThemeContext";
 
+import projects from "../../images/projects.png";
+import projectsw from "../../images/projectsw.png";
 import GitHubLogo from "../../images/github.svg";
 import GitHubLogoI from "../../images/githubi.svg";
 import LinkIcon from "../../images/link.svg";
 import LinkIconI from "../../images/linki.svg";
+import GitHubLogoW from "../../images/githubw.svg";
+import GitHubLogoWI from "../../images/githubwi.svg";
+import LinkIconW from "../../images/linkw.svg";
+import LinkIconWI from "../../images/linkwi.svg";
 
 const ProjectData = [
   {
@@ -55,17 +62,31 @@ const ProjectData = [
   },
 ];
 
-function Links(obj) {
+function Links(obj, colorMode) {
   return (
     <ProjectLinks>
       {obj.github && (
         <ProjectLinkIcon>
-          <ProjectIcon src={[GitHubLogo, GitHubLogoI]} link={obj.github} />
+          <ProjectIcon
+            src={
+              colorMode === "light"
+                ? [GitHubLogo, GitHubLogoI]
+                : [GitHubLogoW, GitHubLogoWI]
+            }
+            link={obj.github}
+          />
         </ProjectLinkIcon>
       )}
       {obj.link && (
         <ProjectLinkIcon>
-          <ProjectIcon src={[LinkIcon, LinkIconI]} link={obj.link} />
+          <ProjectIcon
+            src={
+              colorMode === "light"
+                ? [LinkIcon, LinkIconI]
+                : [LinkIconW, LinkIconWI]
+            }
+            link={obj.link}
+          />
         </ProjectLinkIcon>
       )}
     </ProjectLinks>
@@ -73,15 +94,18 @@ function Links(obj) {
 }
 
 const Projects = ({ className }) => {
+  const { colorMode } = React.useContext(ThemeContext);
+
   return (
     <ProjectContainer id="projects">
-      <SectionHeading left={false}>projects</SectionHeading>
+      {/* <SectionHeading left={false}>projects</SectionHeading> */}
+      {SectionHeading(false, [projects, projectsw], true)}
       <ProjectBoxes>
         {ProjectData.map((item, index) => {
           return (
             <ProjectDetails key={item.title}>
               <ProjectTitle>{item.title}</ProjectTitle>
-              <ProjectLinks>{Links(item)}</ProjectLinks>
+              <ProjectLinks>{Links(item, colorMode)}</ProjectLinks>
               <ProjectDescription>{item.description}</ProjectDescription>
               <ProjectTools>{item.tools}</ProjectTools>
             </ProjectDetails>
@@ -109,7 +133,7 @@ const ProjectDetails = styled.div`
   display: flex;
   flex-direction: column;
   width: 700px;
-  margin: auto auto 5% auto;
+  margin: auto auto 75px auto;
   @media screen and (max-width: 768px) {
     width: 80%;
   }

@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "gatsby";
-import GlobalStyle from "./GlobalStyle";
+// import GlobalStyle from "./GlobalStyle";
 import styled from "styled-components";
+import DarkToggle from "../DarkToggle";
 
 const BlogLayout = ({ children }) => {
   return (
     <>
-      <GlobalStyle></GlobalStyle>
       <BlogHome>
         <BlogLink to={"/"}>🏠</BlogLink>
         <BlogLink to={"/blog"}>📖</BlogLink>
       </BlogHome>
+      <BlogDarkToggle />
       <BlogContainer>{children}</BlogContainer>
     </>
   );
@@ -20,7 +21,8 @@ export default BlogLayout;
 
 const BlogHome = styled.div`
   width: 200px;
-  margin: 40px auto -60px auto;
+  height: auto;
+  margin: 10px auto -60px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -35,14 +37,21 @@ const BlogLink = styled(Link)`
   padding: 0 10px 0 10px;
 
   :hover {
-    background: #fcd8a9;
+    background: var(--color-hover);
   }
 `;
 
 const BlogContainer = styled.div`
   width: min(680px, 80%);
   margin: 75px auto 75px auto;
-  background: #ffe2bd;
+  background: var(--color-blog);
   border-radius: 20px;
   margin-top: 75px;
+`;
+
+const BlogDarkToggle = styled(DarkToggle)`
+  overflow: visible !important;
+  top: 15px;
+  left: 85%;
+  position: relative;
 `;

@@ -4,11 +4,15 @@ import Seo from "../components/Seo";
 import styled from "styled-components";
 import BlogLayout from "../components/layouts/BlogLayout";
 
+import BlogHeading from "../components/BlogHeading";
+
+// import HomeLayout from "../components/layouts/HomeLayout";
+
 const blog = ({ data }) => {
   return (
     <BlogLayout>
       <Seo title="Blog"></Seo>
-      <BlogHeader>blog</BlogHeader>
+      <BlogHeading />
       <BlogForm>
         <BlogSearch></BlogSearch>
       </BlogForm>
@@ -26,7 +30,6 @@ const blog = ({ data }) => {
         ))}
       </BlogArticles>
     </BlogLayout>
-    // </Layout>
   );
 };
 
@@ -51,10 +54,6 @@ export const query = graphql`
 
 export default blog;
 
-const BlogHeader = styled.h1`
-  text-align: center;
-`;
-
 const BlogForm = styled.form``;
 
 const BlogSearch = styled.input`
@@ -67,7 +66,7 @@ const BlogSearch = styled.input`
 const BlogArticles = styled.div`
   ${"" /* width: 680px; */}
 
-  background: #ffe2bd;
+  background: var(--color-blog);
   border-radius: 20px;
 `;
 
@@ -84,7 +83,7 @@ const BlogArticle = styled.article`
   border-radius: 20px;
   padding: 10px 0 10px 0;
   :hover {
-    background: #fcd8a9;
+    background: var(--color-hover);
   }
 `;
 

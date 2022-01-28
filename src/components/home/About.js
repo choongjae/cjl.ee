@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import { SectionHeading } from "../SectionHeading";
+import SectionHeading from "../SectionHeading";
+import { ThemeContext } from "../layouts/ThemeContext";
 import Age from "../Age";
 import InlineLink from "../InlineLink";
 import IconLink from "../IconLink";
 
+import about from "../../images/about.png";
+import aboutw from "../../images/aboutw.png";
 import resumeFile from "/static/cjlee-resume.pdf";
 import Myself from "../../images/self.jpg";
 import LinkedIn from "../../images/linkedin.svg";
@@ -16,6 +19,15 @@ import Email from "../../images/email.svg";
 import EmailI from "../../images/emaili.svg";
 import GitHub from "../../images/github.svg";
 import GitHubI from "../../images/githubi.svg";
+
+import LinkedInW from "../../images/linkedinw.svg";
+import LinkedInWI from "../../images/linkedinwi.svg";
+import ResumeW from "../../images/resumew.svg";
+import ResumeWI from "../../images/resumewi.svg";
+import EmailW from "../../images/emailw.svg";
+import EmailWI from "../../images/emailwi.svg";
+import GitHubW from "../../images/githubw.svg";
+import GitHubWI from "../../images/githubwi.svg";
 
 const links = [
   {
@@ -54,19 +66,31 @@ const AboutBio = () => {
   );
 };
 
-const AboutIcons = () => {
+const AboutIcons = (colorMode) => {
+  // const linkedinicons = ((colorMode === "light") : [LinkedIn, LinkedInI] ? [LinkedInW, LinkedInWI]);
+
   return (
     <>
       <AboutIcon
-        src={[LinkedIn, LinkedInI]}
+        src={
+          colorMode === "light"
+            ? [LinkedIn, LinkedInI]
+            : [LinkedInW, LinkedInWI]
+        }
         link={"https://www.linkedin.com/in/cj-lee/"}
       />
       <AboutIcon
-        src={[GitHub, GitHubI]}
+        src={colorMode === "light" ? [GitHub, GitHubI] : [GitHubW, GitHubWI]}
         link={"https://github.com/choongjae"}
       />
-      <AboutIcon src={[Resume, ResumeI]} link={resumeFile} />
-      <AboutIcon src={[Email, EmailI]} link={"mailto:cl2362@cornell.edu"} />
+      <AboutIcon
+        src={colorMode === "light" ? [Resume, ResumeI] : [ResumeW, ResumeWI]}
+        link={resumeFile}
+      />
+      <AboutIcon
+        src={colorMode === "light" ? [Email, EmailI] : [EmailW, EmailWI]}
+        link={"mailto:cl2362@cornell.edu"}
+      />
     </>
   );
 };
@@ -74,16 +98,23 @@ const AboutIcons = () => {
 const birthdate = new Date("March 28, 02 12:16:40 GMT-07:00").getTime();
 
 const About = () => {
+  const { colorMode } = React.useContext(ThemeContext);
+
   return (
     <AboutContainer id="about">
-      <SectionHeading left={false}>about</SectionHeading>
+      {/* <SectionHeading left={false}>
+        {SectionTitle(about)}
+      </SectionHeading> */}
+
+      {SectionHeading(false, [about, aboutw], false)}
       <AboutFlex>
         <AboutColumn>
           <AboutImage src={Myself} />
         </AboutColumn>
         <AboutColumn>
           <AboutBio />
-          <AboutIcons />
+          {/* <AboutIcons /> */}
+          {AboutIcons(colorMode)}
         </AboutColumn>
       </AboutFlex>
     </AboutContainer>
