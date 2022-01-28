@@ -1,3 +1,6 @@
+// Adapted from Josh Comeau's tutorial
+// https://www.joshwcomeau.com/react/dark-mode/
+
 import React from "react";
 
 import {

@@ -3,14 +3,16 @@ import { graphql, Link } from "gatsby";
 import Seo from "../components/Seo";
 import styled from "styled-components";
 import BlogLayout from "../components/layouts/BlogLayout";
-import HomeLayout from "../components/layouts/HomeLayout";
+
+import BlogHeading from "../components/BlogHeading";
+
+// import HomeLayout from "../components/layouts/HomeLayout";
 
 const blog = ({ data }) => {
   return (
     <BlogLayout>
-      {/* // <BlogLayout> */}
       <Seo title="Blog"></Seo>
-      <BlogHeader>blog</BlogHeader>
+      <BlogHeading />
       <BlogForm>
         <BlogSearch></BlogSearch>
       </BlogForm>
@@ -28,8 +30,6 @@ const blog = ({ data }) => {
         ))}
       </BlogArticles>
     </BlogLayout>
-    // </BlogLayout>
-    // </Layout>
   );
 };
 
@@ -53,10 +53,6 @@ export const query = graphql`
 `;
 
 export default blog;
-
-const BlogHeader = styled.h1`
-  text-align: center;
-`;
 
 const BlogForm = styled.form``;
 

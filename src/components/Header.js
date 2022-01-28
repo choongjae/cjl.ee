@@ -124,7 +124,7 @@ const NavLink = styled(AnchorLink)`
 const NavToggle = styled(DarkToggle)`
   position: relative;
   top: 30px;
-  left: 90%;
+  left: 85%;
 
   overflow: visible !important;
 

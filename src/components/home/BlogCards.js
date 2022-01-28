@@ -1,7 +1,10 @@
 import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import styled from "styled-components";
-import { SectionHeading } from "../SectionHeading";
+import SectionHeading from "../SectionHeading";
+
+import blog from "../../images/blog.png";
+import blogw from "../../images/blogw.png";
 
 const BlogCards = () => {
   const data = useStaticQuery(graphql`
@@ -24,17 +27,18 @@ const BlogCards = () => {
     }
   `);
 
-  function handleHover(e) {
-    const t = getComputedStyle(document.documentElement).getPropertyValue(
-      "--color-hover"
-    );
-    alert(t);
-    e.currentTarget.style.background = t;
-  }
+  // function handleHover(e) {
+  //   const t = getComputedStyle(document.documentElement).getPropertyValue(
+  //     "--color-hover"
+  //   );
+  //   alert(t);
+  //   e.currentTarget.style.background = t;
+  // }
 
   return (
     <BlogContainer id="blog">
-      <SectionHeading left={true}>blog</SectionHeading>
+      {/* <SectionHeading left={true}>blog</SectionHeading> */}
+      {SectionHeading(true, [blog, blogw], false)}
       <BlogCardContainer>
         {/* <BlogArticles> */}
         {data.allMdx.nodes.map((node) => (

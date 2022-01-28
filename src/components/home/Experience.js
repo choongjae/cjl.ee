@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { SectionHeading } from "../SectionHeading";
+import SectionHeading from "../SectionHeading";
 
-import CISLogo from "../../images/cornell.png";
+import experience from "../../images/experience.png";
+import experiencew from "../../images/experiencew.png";
+import CISLogo from "../../images/cornell.svg";
 import ACSULogo from "../../images/acsu.png";
 import CUSailLogo from "../../images/cusail.png";
 
@@ -11,10 +13,10 @@ const ExpData = [
   {
     logo: CISLogo,
     org: "Cornell CIS",
-    title: "CS 1110 Course Consultant",
+    title: "Teaching Consultant",
     body: "Fall 2021 - Now<br> \
     Manage a lab section, grade assignments, hold consulting hours, and  \
-    render assistance to students in Cornell's main introductory CS class.<br>\
+    render assistance to students in Cornell's introductory CS courses.<br>\
     (Includes playing lots of Python Space Invaders.)",
   },
   {
@@ -41,7 +43,8 @@ const ExpData = [
 const Experience = ({ className }) => {
   return (
     <ExpContainer id="experience">
-      <SectionHeading left={true}>experience</SectionHeading>
+      {/* <SectionHeading left={true}>experience</SectionHeading> */}
+      {SectionHeading(true, [experience, experiencew], true)}
       <ExpBoxes>
         {ExpData.map((item, index) => {
           return (
@@ -89,6 +92,11 @@ const ExpBox = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    margin: 20px 0 75px 0;
+  }
+
   .expTxt {
     flex: 50%;
     margin: 0 5% 0 5%;
@@ -100,7 +108,7 @@ const ExpBox = styled.div`
     flex: 20%;
     text-align: center;
     @media screen and (max-width: 768px) {
-      display: none;
+      ${"" /* flex: 40%; */}
     }
   }
 `;
@@ -121,6 +129,6 @@ const ExpImg = styled.img`
   align-self: end;
 
   @media screen and (max-width: 768px) {
-    height: 3rem;
+    height: 6rem;
   }
 `;

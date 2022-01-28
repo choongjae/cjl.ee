@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import GlobalStyle from "./GlobalStyle";
+// import GlobalStyle from "./GlobalStyle";
 import styled from "styled-components";
 import DarkToggle from "../DarkToggle";
 
@@ -21,7 +21,8 @@ export default BlogLayout;
 
 const BlogHome = styled.div`
   width: 200px;
-  margin: 40px auto -60px auto;
+  height: auto;
+  margin: 10px auto -60px auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -51,6 +52,6 @@ const BlogContainer = styled.div`
 const BlogDarkToggle = styled(DarkToggle)`
   overflow: visible !important;
   top: 15px;
-  left: 80%;
+  left: 85%;
   position: relative;
 `;
