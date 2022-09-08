@@ -10,7 +10,7 @@ const navData = [
   { title: "about", link: "/#about" },
   { title: "experience", link: "/#experience" },
   { title: "projects", link: "/#projects" },
-  { title: "blog", link: "/#blog" },
+  // { title: "blog", link: "/#blog" },
 ];
 
 const Header = () => {
@@ -22,10 +22,7 @@ const Header = () => {
       if (window.scrollY > scroll && showing.current) {
         showing.current = false;
       }
-      if (
-        (window.scrollY < scroll && !showing.current) ||
-        window.scrollY < 50
-      ) {
+      if ((window.scrollY < scroll && !showing.current) || window.scrollY < 50) {
         showing.current = true;
       }
       setScroll(window.scrollY);

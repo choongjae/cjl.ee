@@ -5,11 +5,21 @@ import SectionHeading from "../SectionHeading";
 
 import experience from "../../images/experience.png";
 import experiencew from "../../images/experiencew.png";
+import MetaLogo from "../../images/meta.png";
 import CISLogo from "../../images/cornell.svg";
 import ACSULogo from "../../images/acsu.png";
 import CUSailLogo from "../../images/cusail.png";
 
 const ExpData = [
+  {
+    logo: MetaLogo,
+    org: "Meta",
+    title: "Enterprise Software Engineer Intern",
+    body: "Summer 2022<br> \
+    Implemented a full-stack auditing system for an internal tool using Hack, \
+    React, various other internal frameworks, and lots of free snacks from the \
+    the microkitchens.",
+  },
   {
     logo: CISLogo,
     org: "Cornell CIS",
@@ -31,10 +41,10 @@ const ExpData = [
   {
     logo: CUSailLogo,
     org: "CUSail",
-    title: "Business and Operations Subteam",
+    title: "Business and Operations Lead",
     body: "Fall 2020 - Now <br>\
     Manage logistics and outreach of the 30 member student-led project team, \
-    from web development to recruitment, including raising $3000 dollars for team budget,\
+    from web development to recruitment, including raising $30,000 in-kind value,\
     all towards the goal of building a competition-ready autonomous sailboat!\
     ",
   },
@@ -52,9 +62,7 @@ const Experience = ({ className }) => {
               <ExpColumn className="expTxt">
                 <ExpOrg>{item.org}</ExpOrg>
                 <ExpTitle>{item.title}</ExpTitle>
-                <ExpBody
-                  dangerouslySetInnerHTML={{ __html: item.body }}
-                ></ExpBody>
+                <ExpBody dangerouslySetInnerHTML={{ __html: item.body }}></ExpBody>
               </ExpColumn>
               <ExpColumn className="expImg">
                 <ExpImg src={item.logo} />

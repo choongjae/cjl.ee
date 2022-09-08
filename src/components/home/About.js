@@ -33,7 +33,8 @@ const links = [
   {
     text: "Cornell University",
     color: "#B31B1B",
-    link: "https://www.youtube.com/watch?v=OL2fmTJU2P4&t=3896s",
+    link: "https://www.facebook.com/Quandoalcinemasisognava/videos/titanic-1953-film-completo-titanic-is-a-1953-american-drama-film-directed-by-jea/964947974323758/?t=3900",
+    // link: "https://www.youtube.com/watch?v=OL2fmTJU2P4&t=3896s",
   },
   {
     text: "New Jersey",
@@ -47,20 +48,18 @@ const links = [
   },
 ];
 
+const grade = Date.now() / 1000 < 1692872010 ? "junior" : "senior";
+
 const AboutBio = () => {
   return (
     <>
       <AboutIntro>Hi! I'm CJ.</AboutIntro>
       <AboutDetails>
-        I'm a {Age(birthdate)}-year-old sophomore at {InlineLink(links[0])}{" "}
-        studying Computer Science. I'm from north {InlineLink(links[1])},
-        although I've really spent most of my life in {InlineLink(links[2])}
+        I'm a <>{Age(birthdate)}</>-year-old {grade} at {InlineLink(links[0])} studying Computer Science. I'm from north {InlineLink(links[1])}, although I've really spent most of my life in {InlineLink(links[2])}
         .
         <br />
         <br />
-        My love for computers and technology began at a young age, and I'm
-        incredibly amazed and passionate at how much technology is changing the
-        state of the world every year.
+        My love for computers and technology began at a young age, and I'm incredibly amazed and passionate at how much technology is changing the state of the world every year.
       </AboutDetails>
     </>
   );
@@ -71,26 +70,10 @@ const AboutIcons = (colorMode) => {
 
   return (
     <>
-      <AboutIcon
-        src={
-          colorMode === "light"
-            ? [LinkedIn, LinkedInI]
-            : [LinkedInW, LinkedInWI]
-        }
-        link={"https://www.linkedin.com/in/cj-lee/"}
-      />
-      <AboutIcon
-        src={colorMode === "light" ? [GitHub, GitHubI] : [GitHubW, GitHubWI]}
-        link={"https://github.com/choongjae"}
-      />
-      <AboutIcon
-        src={colorMode === "light" ? [Resume, ResumeI] : [ResumeW, ResumeWI]}
-        link={resumeFile}
-      />
-      <AboutIcon
-        src={colorMode === "light" ? [Email, EmailI] : [EmailW, EmailWI]}
-        link={"mailto:cl2362@cornell.edu"}
-      />
+      <AboutIcon src={colorMode === "light" ? [LinkedIn, LinkedInI] : [LinkedInW, LinkedInWI]} link={"https://www.linkedin.com/in/cj-lee/"} />
+      <AboutIcon src={colorMode === "light" ? [GitHub, GitHubI] : [GitHubW, GitHubWI]} link={"https://github.com/choongjae"} />
+      <AboutIcon src={colorMode === "light" ? [Resume, ResumeI] : [ResumeW, ResumeWI]} link={resumeFile} />
+      <AboutIcon src={colorMode === "light" ? [Email, EmailI] : [EmailW, EmailWI]} link={"mailto:cl2362@cornell.edu"} />
     </>
   );
 };
