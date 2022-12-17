@@ -23,7 +23,7 @@ const BlogHeader = styled.h1`
 
 const BlogImg = styled.img`
   ${"" /* display: block; */}
-  height: 125px;
+  height: 100px;
   width: auto;
   margin: 25px auto 0 auto;
 `;

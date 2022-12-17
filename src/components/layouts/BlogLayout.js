@@ -3,15 +3,17 @@ import { Link } from "gatsby";
 // import GlobalStyle from "./GlobalStyle";
 import styled from "styled-components";
 import DarkToggle from "../DarkToggle";
+import Header from "../Header";
 
 const BlogLayout = ({ children }) => {
   return (
     <>
-      <BlogHome>
+      {/* <BlogHome>
         <BlogLink to={"/"}>🏠</BlogLink>
         <BlogLink to={"/blog"}>📖</BlogLink>
-      </BlogHome>
-      <BlogDarkToggle />
+      </BlogHome> */}
+      <Header />
+      {/* <BlogDarkToggle /> */}
       <BlogContainer>{children}</BlogContainer>
     </>
   );
@@ -43,10 +45,11 @@ const BlogLink = styled(Link)`
 
 const BlogContainer = styled.div`
   width: min(680px, 80%);
-  margin: 75px auto 75px auto;
-  background: var(--color-blog);
+  ${'' /* margin: 75px auto 75px auto; */}
+  margin: auto;
+  ${'' /* background: var(--color-blog); */}
   border-radius: 20px;
-  margin-top: 75px;
+  ${'' /* margin-top: 75px; */}
 `;
 
 const BlogDarkToggle = styled(DarkToggle)`

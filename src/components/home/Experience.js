@@ -23,7 +23,7 @@ const ExpData = [
   {
     logo: CISLogo,
     org: "Cornell CIS",
-    title: "Teaching Consultant",
+    title: "Teaching Assistant",
     body: "Fall 2021 - Now<br> \
     Manage a lab section, grade assignments, hold consulting hours, and  \
     render assistance to students in Cornell's introductory CS courses.<br>\

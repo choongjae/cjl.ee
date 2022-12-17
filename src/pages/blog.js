@@ -66,12 +66,12 @@ const BlogSearch = styled.input`
 const BlogArticles = styled.div`
   ${"" /* width: 680px; */}
 
-  background: var(--color-blog);
+  ${'' /* background: var(--color-blog); */}
   border-radius: 20px;
 `;
 
 const BlogLink = styled(Link)`
-  color: inherit;
+  ${'' /* color: inherit; */}
 `;
 
 const BlogArticle = styled.article`

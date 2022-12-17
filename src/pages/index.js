@@ -15,7 +15,7 @@ const IndexPage = () => (
     <Bio />
     <Experience />
     <Projects />
-    {/* <Blog /> */}
+    <Blog />
   </HomeLayout>
 );
 

@@ -9,6 +9,7 @@ import ImgCaption from "../components/blog/ImgCaption";
 
 const BlogP = styled.p`
   margin: 15px 0 15px 0;
+  ${'' /* font-family: 'Roboto'; */}
 `;
 const BlogUl = styled.ul`
   margin-left: 25px;
@@ -112,6 +113,7 @@ const BlogDot = styled.span`
 `;
 const BlogBody = styled.div`
   padding: 0 25px 25px 25px;
+  font-family: 'Roboto';
   ${
     "" /* #parent * {
     margin-bottom: 15px;
