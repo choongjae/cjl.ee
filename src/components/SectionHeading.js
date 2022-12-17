@@ -25,6 +25,7 @@ const Heading = styled.h2`
 const Title = styled.img`
   display: inline-block;
   height: 75px;
+  height: clamp(50px, 75px, 10vw);
   width: auto;
   margin-bottom: ${({ adjust }) => (adjust ? "-25px" : "0px")};
 `;

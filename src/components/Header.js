@@ -52,8 +52,8 @@ export default Header;
 const Nav = styled.nav`
   ${'' /* position: relative; */}
   height: 75px;
-  display: flex;
-  justify-content: space-between;
+  ${'' /* display: flex; */}
+  ${'' /* justify-content: space-between; */}
   z-index: 999;
   background: var(--color-background);
   ${'' /* position: fixed; */}
@@ -109,20 +109,21 @@ const NavLink = styled(AnchorLink)`
   &:last-child {
     border-radius: 0 0 25px 0;
   }
-  @media screen and (max-width: 475px) {
-    font-size: 18px;
-  }
 `;
 
 // position relative for positioning wrt navmenu
 // overflow visible important to avoid cutting off edges
 const NavToggle = styled(DarkToggle)`
   position: relative;
-  top: 33px;
-  left: -30px;
+  top: -42px;
+  left: 95%;
 
   overflow: visible !important;
 
   background: var(--color-background);
-  border-radius: 5px;
+  ${'' /* border-radius: 5px; */}
+  @media screen and (max-width: 850px) {
+    top: -10px;
+    left: calc(50% - 15px);
+  }
 `;
