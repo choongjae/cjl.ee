@@ -107,7 +107,7 @@ const About = () => {
 export default About;
 
 const AboutContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

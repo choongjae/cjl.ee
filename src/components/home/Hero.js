@@ -15,10 +15,8 @@ const titleOptions = {
     "Korean-American",
     "Computador",
     "Oklahomon",
-    "Red Big Cornellian",
     "Cookie Lover",
     "Milk Aficionado",
-    "Based around NYC",
     "Like and Bookmark!",
     "or don't.... :(",
     "Have a great day!",
@@ -47,14 +45,14 @@ const Hero = ({ className }) => {
 export default Hero;
 
 const HContainer = styled.div`
-  height: 100vh;
+  min-height: max(550px, 100vh);
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   align-items: center;
   width: min(100%,1400px);
-  margin:auto;
+  margin: -75px auto auto auto;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -80,7 +78,6 @@ const HColumn = styled.div`
 
 const HImage = styled.img`
   max-width: 75%;
-  height: auto;
 `;
 
 const HTitle = styled.h3`
