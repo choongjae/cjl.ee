@@ -7,15 +7,46 @@ import BlogLayout from "../components/layouts/BlogLayout";
 import Seo from "../components/Seo";
 import ImgCaption from "../components/blog/ImgCaption";
 
+// consts
+
 const BlogP = styled.p`
   margin: 15px 0 15px 0;
-  ${'' /* font-family: 'Roboto'; */}
+  font-family: 'Open Sans';
+  font-size: 16px;
 `;
+
+const BlogA = styled.a`
+  font-family: 'Open Sans';
+  color: blue;
+`
+
+const BlogStrong = styled.strong`
+  font-family: 'Open Sans';
+`
+
 const BlogUl = styled.ul`
   margin-left: 25px;
 `;
 
-const components = { p: BlogP, ul: BlogUl, ImgCaption };
+const BlogLi = styled.li`
+  font-family: 'Open Sans';
+  font-size: 16px;
+`
+
+const BlogH1 = styled.h1`
+  font-family: 'Open Sans';
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 15px;
+`
+
+const BlogH2 = styled.h2`
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 15px;
+`
+const components = { p: BlogP, ul: BlogUl, a: BlogA, strong: BlogStrong, li: BlogLi, h1: BlogH1, h2: BlogH2, ImgCaption };
 
 const BlogPost = ({ data }) => {
   return (
@@ -26,12 +57,12 @@ const BlogPost = ({ data }) => {
           <BlogTitle>{data.mdx.frontmatter.title}</BlogTitle>
           <BlogDetails>
             <BlogDate>{data.mdx.frontmatter.date}</BlogDate>
-            <BlogDot>·</BlogDot>
+            {/* <BlogDot>·</BlogDot>
             <BlogTags>
               {data.mdx.frontmatter.tags.map((tag) => (
                 <BlogTag key={tag}>{tag}</BlogTag>
               ))}
-            </BlogTags>
+            </BlogTags> */}
           </BlogDetails>
         </BlogHeader>
         <BlogBody>
@@ -63,6 +94,7 @@ const BlogHeader = styled.div``;
 
 const BlogTitle = styled.h1`
   ${"" /* font-size: 64px; */}
+  ${'' /* font-family: '';s */}
   text-align: center;
 
   @media screen and (max-width: 768px) {
@@ -83,9 +115,10 @@ const BlogDetails = styled.div`
 const BlogDate = styled.p`
   padding: 0 5px 0 5px;
   margin-right: 10px;
-  font-family: "Fira Code", monospace;
+  font-family: "Inconsolata";
   font-size: 18px;
-  background: var(--color-blog2);
+  ${'' /* background: var(--color-blog2); */}
+  color: #808080;
   border-radius: 5px;
   width: auto;
 `;
@@ -113,12 +146,6 @@ const BlogDot = styled.span`
 `;
 const BlogBody = styled.div`
   padding: 0 25px 25px 25px;
-  font-family: 'Roboto';
-  ${
-    "" /* #parent * {
-    margin-bottom: 15px;
-  } */
-  }
 `;
 const BlogContent = styled(MDXRenderer)`
   > * {
@@ -128,7 +155,7 @@ const BlogContent = styled(MDXRenderer)`
   p {
     margin-bottom: 15px;
   }
-
+  
   li {
     margin-left: 15px;
   }

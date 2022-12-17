@@ -44,7 +44,7 @@ const BlogLink = styled(Link)`
 `;
 
 const BlogContainer = styled.div`
-  width: min(680px, 80%);
+  width: min(720px, 80%);
   ${'' /* margin: 75px auto 75px auto; */}
   margin: auto;
   ${'' /* background: var(--color-blog); */}

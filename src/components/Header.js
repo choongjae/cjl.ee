@@ -8,9 +8,9 @@ import DarkToggle from "./DarkToggle";
 
 const navData = [
   { title: "about", link: "/#about" },
+  { title: "blog", link: "/#blog" },
   { title: "experience", link: "/#experience" },
   { title: "projects", link: "/#projects" },
-  // { title: "blog", link: "/#blog" },
 ];
 
 const Header = () => {
