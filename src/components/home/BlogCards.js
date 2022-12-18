@@ -52,16 +52,12 @@ const BlogCards = () => {
               <BlogHead>
                 <BlogEmoji>{node.frontmatter.emoji}</BlogEmoji>
                 <BlogCard>
-                  <BlogArticleHeader>
-                    {node.frontmatter.title}
-                  </BlogArticleHeader>
+                  <BlogArticleHeader>{node.frontmatter.title}</BlogArticleHeader>
                   <p>{node.frontmatter.date}</p>
                 </BlogCard>
               </BlogHead>
               <BlogFoot>
-                <BlogArticleSubtitle>
-                  {node.frontmatter.subtitle}
-                </BlogArticleSubtitle>
+                <BlogArticleSubtitle>{node.frontmatter.subtitle}</BlogArticleSubtitle>
               </BlogFoot>
             </BlogArticle>
           </BlogLink>
@@ -122,6 +118,9 @@ const BlogArticle = styled.div`
 const BlogEmoji = styled.div`
   margin: auto 25px auto 25px;
   font-size: 30px;
+  background-color: var(--color-emoji);
+  border-radius: 10px;
+  padding: 10px;
 `;
 
 const BlogCard = styled.div`

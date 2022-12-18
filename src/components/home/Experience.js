@@ -54,7 +54,7 @@ const Experience = ({ className }) => {
   return (
     <ExpContainer id="experience">
       {/* <SectionHeading left={true}>experience</SectionHeading> */}
-      {SectionHeading(true, [experience, experiencew], true)}
+      {SectionHeading(false, [experience, experiencew], true)}
       <ExpBoxes>
         {ExpData.map((item, index) => {
           return (

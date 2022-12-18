@@ -23,6 +23,14 @@ export const COLORS = {
     light: "#fcd8a9",
     dark: "#30335e",
   },
+  emoji: {
+    light: "transparent",
+    dark: "#ffffff",
+  },
+  hyperlink: {
+    light: "blue",
+    dark: "lightblue",
+  },
 };
 
 export const COLOR_MODE_KEY = "color-mode";

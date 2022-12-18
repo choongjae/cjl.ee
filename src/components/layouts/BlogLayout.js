@@ -5,16 +5,16 @@ import styled from "styled-components";
 import DarkToggle from "../DarkToggle";
 import Header from "../Header";
 
-const BlogLayout = ({ children }) => {
+const BlogLayout = (props) => {
   return (
     <>
       {/* <BlogHome>
         <BlogLink to={"/"}>🏠</BlogLink>
         <BlogLink to={"/blog"}>📖</BlogLink>
       </BlogHome> */}
-      <Header />
+      <Header type={props.headerType}/>
       {/* <BlogDarkToggle /> */}
-      <BlogContainer>{children}</BlogContainer>
+      <BlogContainer>{props.children}</BlogContainer>
     </>
   );
 };

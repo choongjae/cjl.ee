@@ -6,7 +6,7 @@ const HomeLayout = ({ children }) => {
   return (
     // <ThemeProvider>
     <>
-      <Header />
+      <Header type={0}/>
       <main>{children}</main>
     </>
     // </ThemeProvider>

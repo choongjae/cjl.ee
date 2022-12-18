@@ -20,19 +20,16 @@ const ProjectData = [
   {
     title: "cjl.ee",
     github: "https://github.com/choongjae/cjl.ee",
-    link: "https://cjl.ee/secret",
-    description:
-      "The website you're looking at right now! Custom designed and built in-house\
+    // link: "https://cjl.ee/secret",
+    description: "The website you're looking at right now! Custom designed and built in-house\
       with sweat, tears, and a sizable amount of Googling to remember how flexboxes\
       work. 🥸",
-    tools:
-      "React, Gatsby, GraphQL, styled-components, Framer Motion, GitHub Pages, Figma",
+    tools: "React, Gatsby, GraphQL, styled-components, Framer Motion, GitHub Pages, Figma",
   },
   {
     title: "OCamlMon",
     github: "https://github.com/choongjae/OCamlMon",
-    description:
-      "A remake of Pokemon created completely in OCaml using functional \
+    description: "A remake of Pokemon created completely in OCaml using functional \
       programming paradigms. Worked on the battle engine and JSON data storage \
       and retrieval, along with writing an external Python script to convert \
       images into a JSON format.",
@@ -41,8 +38,7 @@ const ProjectData = [
   {
     title: "Musify",
     github: "https://github.com/zaedaamrin/HackChallenge2021",
-    description:
-      "Musify is a personalized Android app, where you're able to create your \
+    description: "Musify is a personalized Android app, where you're able to create your \
       own playlists, add your favorite songs, and play their Youtube videos \
       in the app! Received Honorable Mention for Most Creative App Design in \
       Cornell AppDev's Hack Challenge.",
@@ -52,8 +48,7 @@ const ProjectData = [
     title: "ACSU Website",
     github: "https://github.com/cornellacsu/new_web_react",
     link: "https://acsu.cornell.edu/",
-    description:
-      "Collaborated with a 5-member team to completely overhaul the website of \
+    description: "Collaborated with a 5-member team to completely overhaul the website of \
       Cornell's Association of Computer Science Undergraduates. I mainly worked on \
       redesigning the Resources section of the site, which hosts thousands of words \
       for helpful program and course information regarding CS at Cornell. \
@@ -67,26 +62,12 @@ function Links(obj, colorMode) {
     <ProjectLinks>
       {obj.github && (
         <ProjectLinkIcon>
-          <ProjectIcon
-            src={
-              colorMode === "light"
-                ? [GitHubLogo, GitHubLogoI]
-                : [GitHubLogoW, GitHubLogoWI]
-            }
-            link={obj.github}
-          />
+          <ProjectIcon src={colorMode === "light" ? [GitHubLogo, GitHubLogoI] : [GitHubLogoW, GitHubLogoWI]} link={obj.github} />
         </ProjectLinkIcon>
       )}
       {obj.link && (
         <ProjectLinkIcon>
-          <ProjectIcon
-            src={
-              colorMode === "light"
-                ? [LinkIcon, LinkIconI]
-                : [LinkIconW, LinkIconWI]
-            }
-            link={obj.link}
-          />
+          <ProjectIcon src={colorMode === "light" ? [LinkIcon, LinkIconI] : [LinkIconW, LinkIconWI]} link={obj.link} />
         </ProjectLinkIcon>
       )}
     </ProjectLinks>
@@ -99,7 +80,7 @@ const Projects = ({ className }) => {
   return (
     <ProjectContainer id="projects">
       {/* <SectionHeading left={false}>projects</SectionHeading> */}
-      {SectionHeading(false, [projects, projectsw], true)}
+      {SectionHeading(true, [projects, projectsw], true)}
       <ProjectBoxes>
         {ProjectData.map((item, index) => {
           return (

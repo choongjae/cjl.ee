@@ -7,36 +7,25 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import DarkToggle from "./DarkToggle";
 
 const navData = [
-  { title: "about", link: "/#about" },
-  { title: "blog", link: "/#blog" },
-  { title: "experience", link: "/#experience" },
-  { title: "projects", link: "/#projects" },
+  [
+    { title: "about", link: "/#about" },
+    { title: "blog", link: "/#blog" },
+    { title: "experience", link: "/#experience" },
+    { title: "projects", link: "/#projects" },
+  ],
+  [
+    { title: "home", link: "/"},
+  ],
+  [
+    { title: "blog", link: "/blog"},
+  ]
 ];
 
-const Header = () => {
-  // const [scroll, setScroll] = useState(0);
-  // const showing = useRef(true);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > scroll && showing.current) {
-  //       showing.current = false;
-  //     }
-  //     if ((window.scrollY < scroll && !showing.current) || window.scrollY < 50) {
-  //       showing.current = true;
-  //     }
-  //     setScroll(window.scrollY);
-  //   };
-  //   window.addEventListener("scroll", handleScroll, { passive: true });
-
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [scroll]);
-
+const Header = (props) => {
   return (
     <Nav>
-      {/* <Bars /> */}
       <NavMenu>
-        {navData.map((item, index) => (
+        {navData[props.type].map((item, index) => (
           <NavLink to={item.link} key={index}>
             {item.title}
           </NavLink>
@@ -50,17 +39,17 @@ const Header = () => {
 export default Header;
 
 const Nav = styled.nav`
-  ${'' /* position: relative; */}
+  ${"" /* position: relative; */}
   height: 75px;
-  ${'' /* display: flex; */}
-  ${'' /* justify-content: space-between; */}
+  ${"" /* display: flex; */}
+  ${"" /* justify-content: space-between; */}
   z-index: 999;
   background: var(--color-background);
-  ${'' /* position: fixed; */}
+  ${"" /* position: fixed; */}
   top: 0;
   left: 0;
   right: 0;
-  ${'' /* margin-top: ${(props) => (props.show ? "0px" : "-100px")}; */}
+  ${"" /* margin-top: ${(props) => (props.show ? "0px" : "-100px")}; */}
   transition: margin-top 0.5s;
 `;
 
@@ -80,7 +69,7 @@ const Nav = styled.nav`
 
 // position absolute for dark mode toggle positioning
 const NavMenu = styled.div`
-  ${'' /* position: absolute; */}
+  ${"" /* position: absolute; */}
 
   display: flex;
   flex-direction: row;
@@ -99,6 +88,7 @@ const NavLink = styled(AnchorLink)`
   height: 100%;
   cursor: pointer;
   text-align: center;
+  font-family: 'EB Garamond';
   font-size: 24px;
   color: var(--color-text);
 
@@ -121,7 +111,7 @@ const NavToggle = styled(DarkToggle)`
   overflow: visible !important;
 
   background: var(--color-background);
-  ${'' /* border-radius: 5px; */}
+  ${"" /* border-radius: 5px; */}
   @media screen and (max-width: 850px) {
     top: -10px;
     left: calc(50% - 15px);

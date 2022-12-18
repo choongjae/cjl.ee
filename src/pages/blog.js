@@ -10,7 +10,7 @@ import BlogHeading from "../components/BlogHeading";
 
 const blog = ({ data }) => {
   return (
-    <BlogLayout>
+    <BlogLayout headerType={1}>
       <Seo title="Blog"></Seo>
       <BlogHeading />
       <BlogForm>
@@ -66,12 +66,12 @@ const BlogSearch = styled.input`
 const BlogArticles = styled.div`
   ${"" /* width: 680px; */}
 
-  ${'' /* background: var(--color-blog); */}
+  ${"" /* background: var(--color-blog); */}
   border-radius: 20px;
 `;
 
 const BlogLink = styled(Link)`
-  ${'' /* color: inherit; */}
+  ${"" /* color: inherit; */}
 `;
 
 const BlogArticle = styled.article`
@@ -90,6 +90,9 @@ const BlogArticle = styled.article`
 const BlogEmoji = styled.div`
   margin: 25px;
   font-size: 30px;
+  background-color: var(--color-emoji);
+  border-radius: 10px;
+  padding: 10px;
 `;
 
 const BlogCard = styled.div``;

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const ImgCaption = ({ children, caption }) => {
+const ImgCaption = (props) => {
   return (
     <div>
-      {children}
-      <Caption>{caption}</Caption>
+      {props.children}
+      <Caption>{props.caption}</Caption>
     </div>
   );
 };
