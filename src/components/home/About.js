@@ -11,6 +11,9 @@ import about from "../../images/about.png";
 import aboutw from "../../images/aboutw.png";
 import resumeFile from "/static/cjlee-resume.pdf";
 import Myself from "../../images/self.jpg";
+import KokoHead from "../../images/kokohead.jpg";
+import Olomana from "../../images/olomana.jpg";
+import BeatSaber from "../../images/beatsaber.gif";
 import LinkedIn from "../../images/linkedin.svg";
 import LinkedInI from "../../images/linkedini.svg";
 import Resume from "../../images/resume.svg";
@@ -80,7 +83,11 @@ const AboutIcons = (colorMode) => {
 
 const birthdate = new Date("March 28, 02 12:16:40 GMT-07:00").getTime();
 
+// Make images 500 x 600 ratio for convenience (these are all 2500 x 3000)
+const imagesArr = [Myself, KokoHead, Olomana, BeatSaber];
+
 const About = () => {
+  const [curImage, setCurImage] = React.useState(0);
   const { colorMode } = React.useContext(ThemeContext);
 
   return (
@@ -92,7 +99,7 @@ const About = () => {
       {SectionHeading(false, [about, aboutw], false)}
       <AboutFlex>
         <AboutColumn>
-          <AboutImage src={Myself} />
+          <AboutImage onMouseDown={() => setCurImage((curImage + 1) % imagesArr.length)} src={imagesArr[curImage]} />
         </AboutColumn>
         <AboutColumn>
           <AboutBio />
@@ -142,6 +149,11 @@ const AboutColumn = styled.div`
 const AboutImage = styled.img`
   width: min(80%, 500px);
   height: auto;
+  max-height: 600px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media screen and (max-width: 768px) {
     display: none;
