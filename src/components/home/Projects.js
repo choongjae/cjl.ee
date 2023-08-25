@@ -17,14 +17,25 @@ import LinkIconW from "../../images/linkw.svg";
 import LinkIconWI from "../../images/linkwi.svg";
 
 const ProjectData = [
+  // {
+  //   title: "cjl.ee",
+  //   github: "https://github.com/choongjae/cjl.ee",
+  //   // link: "https://cjl.ee/secret",
+  //   description: "The website you're looking at right now! Custom designed and built in-house\
+  //     with sweat, tears, and a sizable amount of Googling to remember how flexboxes\
+  //     work. 🥸",
+  //   tools: "React, Gatsby, GraphQL, styled-components, Framer Motion, GitHub Pages, Figma",
+  // },
   {
-    title: "cjl.ee",
-    github: "https://github.com/choongjae/cjl.ee",
-    // link: "https://cjl.ee/secret",
-    description: "The website you're looking at right now! Custom designed and built in-house\
-      with sweat, tears, and a sizable amount of Googling to remember how flexboxes\
-      work. 🥸",
-    tools: "React, Gatsby, GraphQL, styled-components, Framer Motion, GitHub Pages, Figma",
+    title: "9 Lives",
+    github: "https://github.com/studiosstudios/nine-lives",
+    link: "https://gdiac.cs.cornell.edu/gdiac/showcase/gallery/ninelives/",
+    description: "Play as a cat in this puzzle-platformer game where dying is OK! \
+      Use your past corpses to solve puzzles and beat challenges in the immersive world, \
+      and leverage the power of your magic bell to swap your soul into other corpses. \
+      Created with the hard effort of 9 team members using Java's LibGDX Engine, won \
+      Most Polished Game at Cornell GDIAC's Spring 2023 Showcase.",
+    tools: "Java, LibGDX",
   },
   {
     title: "OCamlMon",

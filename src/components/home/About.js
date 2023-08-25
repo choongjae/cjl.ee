@@ -36,7 +36,7 @@ const links = [
   {
     text: "Cornell University",
     color: "#B31B1B",
-    link: "https://www.facebook.com/Quandoalcinemasisognava/videos/titanic-1953-film-completo-titanic-is-a-1953-american-drama-film-directed-by-jea/964947974323758/?t=3900",
+    link: "https://www.youtube.com/watch?v=j8qp3ITVqY0&t=14s",
     // link: "https://www.youtube.com/watch?v=OL2fmTJU2P4&t=3896s",
   },
   {

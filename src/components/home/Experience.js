@@ -5,6 +5,7 @@ import SectionHeading from "../SectionHeading";
 
 import experience from "../../images/experience.png";
 import experiencew from "../../images/experiencew.png";
+import BrazeLogo from "../../images/braze.png";
 import MetaLogo from "../../images/meta.png";
 import CISLogo from "../../images/cornell.svg";
 import ACSULogo from "../../images/acsu.png";
@@ -12,11 +13,19 @@ import CUSailLogo from "../../images/cusail.png";
 
 const ExpData = [
   {
+    logo: BrazeLogo,
+    org: "Braze",
+    title: "Software Engineer Intern",
+    body: "Summer 2023<br> \
+    Engineered a data ingestion pipeline enabling customers to sync custom attributes from AWS S3  \
+    into the world's best customer analytics platform - with great New York skylines to boot.",
+  },
+  {
     logo: MetaLogo,
     org: "Meta",
-    title: "Enterprise Software Engineer Intern",
+    title: "Software Engineer Intern",
     body: "Summer 2022<br> \
-    Implemented a full-stack auditing system for an internal tool using Hack, \
+    Implemented a full-stack auditing system for an internal enterprise tool using Hack, \
     React, various other internal frameworks, and lots of free snacks from the \
     the microkitchens.",
   },
@@ -25,18 +34,9 @@ const ExpData = [
     org: "Cornell CIS",
     title: "Teaching Assistant",
     body: "Fall 2021 - Now<br> \
-    Manage a lab section, grade assignments, hold consulting hours, and  \
-    render assistance to students in Cornell's introductory CS courses.<br>\
-    (Includes playing lots of Python Space Invaders.)",
-  },
-  {
-    logo: ACSULogo,
-    org: "ACSU",
-    title: "Web Dev Officer",
-    body: "Spring 2021 - Now<br> \
-    Develop the website of the Association of Computer Science Undergraduates, \
-    Cornell’s largest undergraduate CS club, with information about socials, \
-    professional workshops, and general guidance for 1500 CS majors at Cornell<br>",
+    Manage a lab section, grade assignments, hold office hours, and  \
+    render assistance to students. Currently teaching Operating Systems, \
+    previously having taught Introduction to Computing and Data Structures + OOP.",
   },
   {
     logo: CUSailLogo,
@@ -47,6 +47,15 @@ const ExpData = [
     from web development to recruitment, including raising $30,000 in-kind value,\
     all towards the goal of building a competition-ready autonomous sailboat!\
     ",
+  },
+  {
+    logo: ACSULogo,
+    org: "ACSU",
+    title: "Web Dev Officer",
+    body: "Spring 2021 - Spring 2022<br> \
+    Develop the website of the Association of Computer Science Undergraduates, \
+    Cornell’s largest undergraduate CS club, with information about socials, \
+    professional workshops, and general guidance for 1500 CS majors at Cornell<br>",
   },
 ];
 

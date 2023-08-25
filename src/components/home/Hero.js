@@ -8,14 +8,12 @@ import Logo from "/static/logo.svg";
 
 const titleOptions = {
   strings: [
-    "Junior @ Cornell",
+    "Senior @ Cornell",
     "Computer Science Major",
     "Sleeping Minor",
     "Technologist-in-Training",
-    "Korean-American",
     "Computador",
-    "Oklahomon",
-    "Cookie Lover",
+    "Cookie Clicker",
     "Milk Aficionado",
     "Like and Bookmark!",
     "or don't.... :(",
